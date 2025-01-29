@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 첫 GitHub 페이지</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+    <title>필름사진</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>안녕하세요! GitHub Pages에 오신 것을 환영합니다.</h1>
-    <p>이것은 나의 첫 번째 GitHub 페이지입니다.</p>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="header-left">필름사진</div>
+        <div class="header-right">
+            <button id="menu-button">메뉴</button>
+            <div id="menu-dropdown" class="dropdown-content">
+                <a href="landscape.html">풍경</a>
+                <a href="portrait.html">인물</a>
+                <a href="about.html">생각</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 사진 영역 -->
+    <main>
+        <img src="photo/main-photo.jpg" alt="메인 사진" class="main-photo">
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# 변수 설정
+REPO_URL="https://github.com/bluefilmcolor/bluefilmcolor.github.io" # 본인의 GitHub 저장소 URL
+BRANCH="main" # 브랜치 이름
+TOKEN_FILE="../.github_token" # GitHub Personal Access Token이 저장된 파일 경로
+
+# 토큰 읽기
+if [ ! -f "$TOKEN_FILE" ]; then
+  echo "Token file not found at $TOKEN_FILE!"
+  exit 1
+fi
+
+TOKEN=$(cat "$TOKEN_FILE")
+
+# 인증된 URL 생성
+AUTH_REPO_URL=$(echo $REPO_URL | sed "s|https://|https://$TOKEN@|")
+
+# Git push 명령 실행
+echo "Pushing to $BRANCH branch in the repository..."
+git push "$AUTH_REPO_URL" "$BRANCH"
+
+# 성공 메시지 출력
+if [ $? -eq 0 ]; then
+  echo "Push successful!"
+else
+  echo "Push failed! Please check your token or repository details."
+fi
+
