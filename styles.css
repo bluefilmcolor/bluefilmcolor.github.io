@@ -154,7 +154,7 @@ header {
 /* 프로필 컨테이너 */
 .profile-container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1); /* 약간 투명한 흰색 배경 */
+    background-color: rgba(255, 255, 255, 0.05); /* 약간 투명한 흰색 배경 */
     padding: 40px;
     border-radius: 10px;
     backdrop-filter: blur(0px); /* 배경 블러 효과 */
