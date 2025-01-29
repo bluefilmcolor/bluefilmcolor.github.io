@@ -223,4 +223,8 @@ header {
     .dropdown-content {
         min-width: 120px;
     }
+
+    #left-image {
+        object-position: left center;  /* 왼쪽을 기준으로 */
+    }
 }
